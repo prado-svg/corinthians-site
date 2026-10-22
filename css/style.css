@@ -83,6 +83,47 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: white;
+  color: black;
+}
+
+/* Barra de navegação */
+
+nav {
+  background-color: black;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Botões do menu */
+
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 12px 20px;
+  margin: 5px;
+  border: 1px solid white;
+  border-radius: 5px;
+  display: inline-block;
+}
+
+/* Efeito ao passar o mouse */
+
+nav a:hover {
+  background-color: white;
+  color: black;
+}
+.titulo-principal {
+  text-align: center;
+  font-size: 36px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-top: 40px;
+}
 
 /* ==========================================================================
    Helper classes
@@ -242,6 +283,111 @@ textarea {
   h2,
   h3 {
     page-break-after: avoid;
+  }
+}
+
+
+/* ==================================
+   PAGINA DE HISTORIA DO CORINTHIANS
+   ================================== */
+
+/* Fundo geral da pagina */
+
+.historia {
+  background-color: #f2f2f2;
+  min-height: 100vh;
+  padding-bottom: 60px;
+}
+
+/* Cabecalho da historia */
+
+.historia-header {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
+  url("../img/torcida.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+  text-align: center;
+  padding: 120px 20px;
+}
+
+.historia-header h1 {
+  font-size: 42px;
+  margin-bottom: 15px;
+}
+
+.historia-header p {
+  color: #cccccc;
+  font-size: 18px;
+}
+
+/* Caixa branca que contem os textos */
+
+.historia-conteudo {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 35px;
+  background-color: white;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+
+/* Cada secao da historia */
+
+.historia-conteudo section {
+  padding: 25px 0;
+  border-bottom: 1px solid #dddddd;
+}
+
+/* Remove a linha da ultima secao */
+
+.historia-conteudo section:last-child {
+  border-bottom: none;
+}
+
+/* Titulos dos subtopicos */
+
+.historia-conteudo h2 {
+  font-size: 25px;
+  color: #171717;
+  border-left: 4px solid #c8102e;
+  padding-left: 15px;
+  margin-bottom: 20px;
+}
+
+/* Paragrafos da historia */
+
+.historia-conteudo p {
+  font-size: 17px;
+  line-height: 1.8;
+  color: #444444;
+  text-align: left;
+}
+
+/* Adaptacao para celulares */
+
+@media (max-width: 600px) {
+
+  .historia-header {
+    padding: 40px 15px;
+  }
+
+  .historia-header h1 {
+    font-size: 30px;
+  }
+
+  .historia-conteudo {
+    margin: 20px 12px;
+    padding: 20px;
+  }
+
+  .historia-conteudo h2 {
+    font-size: 21px;
+  }
+
+  .historia-conteudo p {
+    font-size: 16px;
   }
 }
 
