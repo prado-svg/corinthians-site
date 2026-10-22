@@ -391,3 +391,169 @@ nav a:hover {
   }
 }
 
+/* ===========================
+   HOME - HERO SECTION
+   =========================== */
+
+.hero {
+  background-color: #171717;
+  color: white;
+  text-align: center;
+  padding: 80px 20px;
+  min-height: 500px;
+}
+
+/* Escudo */
+
+.hero-logo {
+  width: 220px;
+  height: auto;
+  display: block;
+  margin: 0 auto 30px;
+}
+
+/* Texto pequeno acima do titulo */
+
+.hero-subtitulo {
+  color: #e53935;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 3px;
+}
+
+/* Titulo principal */
+
+.hero h1 {
+  font-size: 44px;
+  max-width: 750px;
+  margin: 20px auto;
+  line-height: 1.2;
+}
+
+/* Descricao */
+
+.hero-descricao {
+  color: #cccccc;
+  font-size: 18px;
+  max-width: 600px;
+  margin: 20px auto 35px;
+  line-height: 1.6;
+}
+
+/* Botao */
+
+.hero-botao {
+  display: inline-block;
+  background-color: white;
+  color: black;
+  padding: 15px 30px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+/* Efeito quando o mouse passa */
+
+.hero-botao:hover {
+  background-color: #c8102e;
+  color: white;
+}
+
+
+/* =========================
+   CARDS DO CORINTHIANS
+   ========================= */
+
+.cards {
+  background-color: #f2f2f2;
+  padding: 60px 20px;
+}
+
+.cards h2 {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 40px;
+}
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+
+/* ==========================
+   CARDS DO CORINTHIANS
+   ========================== */
+
+.card {
+  display: block;
+  background-color: white;
+  padding: 0;
+  border-radius: 12px;
+  text-decoration: none;
+  color: black;
+  border: 1px solid #dddddd;
+  overflow: hidden;
+  transition: 0.3s;
+}
+
+/* Imagem na parte superior */
+
+.card-imagem {
+  display: block;
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Conteúdo abaixo da imagem */
+
+.card-conteudo {
+  padding: 25px 30px;
+}
+
+/* Título dos cartões */
+
+.card h3 {
+  font-size: 22px;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+/* Descrição dos cartões */
+
+.card p {
+  color: #666666;
+  font-size: 16px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Efeito ao passar o mouse */
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  border-color: #c8102e;
+}
+
+/* Responsividade para celulares */
+
+@media (max-width: 600px) {
+  .cards-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .card-imagem {
+    height: 200px;
+  }
+
+  .card-conteudo {
+    padding: 20px;
+  }
+}
