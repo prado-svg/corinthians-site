@@ -1,11 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
+
 <head>
-  <link rel="stylesheet" href="css/style.css">
   <meta charset="UTF-8">
-  <title>Title</title>
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+  <title>Sala de Troféus | Corinthians</title>
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/trofeus.css">
 </head>
+
 <body>
+
+<!-- MENU DE NAVEGACAO -->
+
 <nav class="menu-principal">
 
   <a href="index.html" class="menu-logo">
@@ -13,9 +23,9 @@
          alt="Escudo do Corinthians">
 
     <span class="menu-nome">
-            <small>SPORT CLUB</small>
-            <span>CORINTHIANS PAULISTA</span>
-        </span>
+                <small>SPORT CLUB</small>
+                <span>CORINTHIANS PAULISTA</span>
+            </span>
   </a>
 
   <div class="menu-links">
@@ -24,7 +34,52 @@
     <a href="titulos.html" class="ativo">Títulos</a>
     <a href="elenco.html">Elenco</a>
     <a href="lendas.html">Lendas</a>
+
   </div>
+
 </nav>
+
+<!-- SALA DE TROFEUS -->
+
+<main class="sala-trofeus">
+
+  <div class="sala-ambiente">
+
+    <header class="sala-titulo">
+      <h1>Sala de Troféus</h1>
+      <p>As glórias eternas do Timão</p>
+    </header>
+
+    <div class="sala-palco">
+      <button class="seta seta-esquerda" id="anterior"
+              type="button" aria-label="Troféu anterior">
+        &#10094;
+      </button>
+
+      <button class="seta seta-direita" id="proximo"
+              type="button" aria-label="Próximo troféu">
+        &#10095;
+      </button>
+
+      <div class="trofeu-vitrine">
+        <img src="img/trofeus/mundial.png"
+             alt="Troféu do Mundial de Clubes"
+             class="trofeu-imagem"
+             id="imagem-trofeu">
+      </div>
+
+      <div class="trofeu-pedestal"></div>
+      <div class="trofeu-info">
+        <h2 id="trofeu-nome">Mundial de Clubes</h2>
+        <p id="trofeu-quantidade">2 títulos</p>
+        <p id="trofeu-anos">2000 • 2012</p>
+      </div>
+
+    </div>
+
+  </div>
+
+</main>
+<script src="js/trofeus.js"></script>
 </body>
 </html>

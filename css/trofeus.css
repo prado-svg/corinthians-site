@@ -1,0 +1,313 @@
+
+/* ==================================
+   SALA DE TROFEUS DO CORINTHIANS
+   ================================== */
+
+/* Area principal da pagina */
+
+.sala-trofeus {
+  min-height: 100vh;
+  background-color: #101010;
+  color: white;
+}
+
+/* Ambiente geral da sala */
+
+.sala-ambiente {
+  min-height: calc(100vh - 120px);
+  box-sizing: border-box;
+  position: relative;
+  overflow: visible;
+  padding: 40px 20px 80px;
+
+  background: radial-gradient(
+    ellipse at 50% 45%,
+    #554329 0%,
+    #24201b 45%,
+    #101010 85%
+  );
+}
+
+/* Titulo da sala */
+
+.sala-titulo {
+  text-align: center;
+  margin-bottom: 30px;
+  font-family: Georgia, serif;
+}
+
+.sala-titulo h1 {
+  font-size: 56px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.sala-titulo p {
+  color: #d2bb88;
+  font-size: 18px;
+  margin-top: 14px;
+}
+
+/* Area central dos trofeus */
+
+.sala-palco {
+  position: relative;
+  width: 100%;
+  height: 600px;
+}
+
+/* Vitrine do trofeu */
+
+.trofeu-vitrine {
+  position: absolute;
+  left: 50%;
+  top: 43%;
+  transform: translate(-50%, -50%);
+
+  width: 320px;
+  height: 320px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  z-index: 2;
+}
+
+/* Pedestal central */
+
+
+/* PEDESTAL PREMIUM */
+
+.trofeu-pedestal {
+  position: absolute;
+  left: 50%;
+  bottom: 70px;
+  transform: translateX(-50%);
+
+  width: 380px;
+  max-width: 85%;
+  height: 125px;
+  z-index: 1;
+
+  /* Corpo do pedestal */
+  background: linear-gradient(
+    90deg,
+    #4a3320 0%,
+    #17120e 20%,
+    #302318 50%,
+    #100d0b 80%,
+    #4a3320 100%
+  );
+
+  border-radius: 0 0 45% 45% / 0 0 20% 20%;
+
+  border-bottom: 5px solid #c29a58;
+
+  box-shadow:
+    0 25px 40px rgba(0, 0, 0, 0.8),
+    0 0 45px rgba(212, 176, 106, 0.18),
+    inset 0 -12px 18px rgba(0, 0, 0, 0.6);
+}
+
+/* TOPO OVAL DOURADO */
+
+.trofeu-pedestal::before {
+  content: "";
+  position: absolute;
+  top: -23px;
+  left: -3%;
+
+  width: 106%;
+  height: 55px;
+
+  border-radius: 50%;
+
+  background: radial-gradient(
+    ellipse at 40% 25%,
+    #f3d898 0%,
+    #c59a55 40%,
+    #79502a 80%,
+    #382417 100%
+  );
+
+  border: 3px solid #e8c47d;
+
+  box-shadow:
+    0 6px 12px rgba(0, 0, 0, 0.6),
+    0 0 22px rgba(231, 185, 94, 0.35),
+    inset 0 3px 8px rgba(255, 242, 198, 0.4);
+}
+
+/* PLACA METALICA NA FRENTE */
+
+.trofeu-pedestal::after {
+  content: "S. C. CORINTHIANS  •  1910";
+
+  position: absolute;
+  left: 50%;
+  top: 65px;
+  transform: translateX(-50%);
+
+  width: 230px;
+  max-width: 80%;
+  padding: 10px 5px;
+
+  text-align: center;
+  white-space: nowrap;
+  font-family: Georgia, serif;
+  font-size: 13px;
+  letter-spacing: 1px;
+  color: #e8c47d;
+}
+
+.trofeu-imagem {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 0 25px rgba(212, 176, 106, 0.4));
+}
+/* Adaptacao para celulares */
+
+@media (max-width: 600px) {
+
+  .sala-ambiente {
+    padding: 30px 15px 50px;
+  }
+
+  .sala-titulo h1 {
+    font-size: 30px;
+    letter-spacing: 2px;
+  }
+
+  .sala-titulo p {
+    font-size: 15px;
+  }
+
+  .sala-palco {
+    height: 450px;
+  }
+
+  .trofeu-vitrine {
+    width: 240px;
+    height: 260px;
+  }
+
+  .trofeu-pedestal {
+    width: 280px;
+    height: 65px;
+    bottom: 40px;
+  }
+}
+
+
+/* SETAS DA SALA DE TROFEUS */
+.seta {
+  position: absolute;
+  top: 45%;
+  transform: translateY(-50%);
+
+  width: 60px;
+  height: 60px;
+
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 2px solid #d4b06a;
+  border-radius: 50%;
+
+  color: white;
+  font-size: 28px;
+  cursor: pointer;
+
+  z-index: 5;
+  transition: 0.3s;
+}
+
+.seta-esquerda {
+  left: 10%;
+}
+
+.seta-direita {
+  right: 10%;
+}
+
+.seta:hover {
+  background-color: #d4b06a;
+  color: black;
+}
+
+/* Tamanho especial da Libertadores */
+
+.trofeu-imagem.libertadores {
+  transform: translateY(-35px) scale(1.25);
+  position: absolute;
+}
+/* Tamanho especial da CDB */
+.trofeu-imagem.cdb {
+  transform: translateY(40px) scale(1.35);
+}
+
+/* INFORMACOES DOS TROFEUS */
+
+.trofeu-info {
+  position: absolute;
+  left: 50%;
+  bottom: -70px;
+  transform: translateX(-50%);
+  font-family: Georgia, serif;
+
+  width: 90%;
+  text-align: center;
+  z-index: 3;
+}
+
+.trofeu-info h2 {
+  color: white;
+  font-size: 28px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin-bottom: 10px;
+}
+
+.trofeu-info p {
+  color: #d4b06a;
+  font-size: 18px;
+  margin: 6px 0;
+}
+
+#trofeu-anos {
+  font-family: 'Times New Roman', serif;
+  font-size: 17px;
+  line-height: 1.8;
+  letter-spacing: 0.5px;
+
+  max-width: 650px;
+  margin: 10px auto;
+
+  text-align: center;
+  text-wrap: balance;
+}
+
+#trofeu-quantidade {
+  font-family: 'Times New Roman', serif;
+}
+
+/* Ajuste exclusivo do Campeonato Paulista */
+
+.palco-paulista {
+  height: 600px;
+  margin-bottom: 100px;
+}
+
+.palco-paulista .trofeu-info {
+  top: 530px;
+  bottom: auto;
+}
+.trofeu-imagem.paulista {
+  transform: translateY(20px) scale(1);
+}
+
+
+
